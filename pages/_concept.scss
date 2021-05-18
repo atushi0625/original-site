@@ -1,0 +1,109 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+     @media (max-width: ($pc)) {
+          @content;
+     }
+}
+
+@mixin tab {
+     @media (max-width: ($tab)) {
+          @content;
+     }
+}
+
+@mixin sp {
+     @media (max-width: ($sp)) {
+          @content;
+     }
+}
+
+/*各コンテンツ最大幅*/
+@mixin wrapper {
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+}
+
+
+.wrapper {
+     @include wrapper;
+}
+
+
+
+.concept-content {
+     display: flex;
+     padding: 4rem 0;
+
+     @include pc {
+          flex-direction: column;
+          align-items: center;
+     }
+
+
+     .concept-img {
+          @include pc {
+               margin: 30px 0;
+
+          }
+
+          width: 50%;
+          height: auto;
+          object-fit: cover;
+     }
+
+     .concept-box {
+          background-color: var(--bg-color);
+          width: 700px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+
+     }
+
+
+     .concept-heading {
+          font-size: 2rem;
+          padding: 20px 0;
+     }
+
+     .concept-text {
+          line-height: 1.7;
+     }
+}
+
+.text-title {
+     background-color: #fff;
+     border: 1px solid #000;
+     font-weight: bold;
+     font-size: 3rem;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+}
+
+.btn {
+     margin-top: 30px;
+     cursor: pointer;
+
+     &:hover {
+          opacity: .4;
+     }
+
+     .btn-transparent {
+          border: 1px solid #000;
+          border-radius: 20px;
+     }
+
+     .btn-link {
+          padding: 20px 0;
+          width: 200px;
+          font-size: 1.5rem;
+          display: inline-block;
+          font-weight: bold;
+     }
+}

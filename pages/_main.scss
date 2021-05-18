@@ -1,0 +1,73 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+     @media (max-width: ($pc)) {
+          @content;
+     }
+}
+
+@mixin tab {
+     @media (max-width: ($tab)) {
+          @content;
+     }
+}
+
+@mixin sp {
+     @media (max-width: ($sp)) {
+          @content;
+     }
+}
+
+/*各コンテンツ最大幅*/
+@mixin wrapper {
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+}
+
+.wrapper {
+     @include wrapper;
+}
+
+
+
+
+.main-hero {
+     background: url(../images/sample建設メイン.jpg);
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 700px;
+     display: flex;
+
+     justify-content: center;
+     align-items: center;
+
+}
+
+
+.main-caption {
+     text-align: center;
+     color: var(--middle-color);
+     padding: 4rem 1rem;
+
+
+     .main-name {
+          font-size: 3rem;
+          margin-bottom: 3rem;
+
+          @include pc {
+               font-size: 2.2rem;
+          }
+     }
+
+     .main-text {
+          font-size: 2rem;
+
+          @include pc {
+               font-size: 1.2rem;
+          }
+     }
+}

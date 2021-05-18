@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="建設会社 Sample 建設のリクルートサイト" />
+    <!-- ファビコン -->
+    <link rel="icon" href="images/_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <!-- リセットCSSを先に読み込ませる -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <!-- googleフォント -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSSファイル -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- ここからheader -->
+      <header>
+        <!-- 全体をラップする -->
+        <div id="header" class="header-wrapper">
+          <h1 class="header-name">
+            株式会社Sample<br />
+            新卒採用ページ
+          </h1>
+          <nav class="overlay">
+            <img id="close" src="images/close_black_24dp.svg" alt="" />
+            <ul class="main-nav">
+              <li class="nav-list">
+                <a class="menu-home" href="index.html">home</a>
+              </li>
+              <li class="nav-list">
+                <a class="menu-concept" href="#concept">concept</a>
+              </li>
+              <li class="nav-list">
+                <a class="menu-job" href="#job">job</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="sp-menu">
+            <img id="open" src="images/menu_black_hamburger.svg" alt="" />
+          </button>
+        </div>
+      </header>
+
+      <!-- headerはここまで -->
+
+      <main class="main-hero">
+        <div class="main-caption wrapper">
+          <h2 class="main-name">一緒に挑戦し続けよう</h2>
+          <p class="main-text">
+            私たちと一緒に不動産の未来を作りませんか？<br />
+            素敵な仲間を募集しています。
+            「なりたい自分」になれる場所を、きっと見つけられるはずです。
+          </p>
+        </div>
+      </main>
+      <!--mainここまで -->
+      <!-- 第1sectionここから -->
+      <section id="concept">
+        <div class="concept-content wrapper">
+          <img
+            class="concept-img"
+            src="images/新卒画像 1.jpg"
+            alt="シャッターストック画像"
+          />
+          <!-- text系をまとめているclass -->
+          <div class="concept-box">
+            <h1 class="text-title">concept</h1>
+            <h2 class="concept-heading">若手が活躍する職場です</h2>
+            <p class="concept-text">
+              制作チームではWebデザイナーが一番多く在籍しています。
+              ただ機能する制作物を作るのではなく、使い勝手がよく美しいものを生み出していきます。
+              あなたも、誰かの世界が変わるようなクリエイティブなWebサイトを
+              世界中に広めませんか？
+            </p>
+            <button class="btn">
+              <a class="btn-link btn-transparent" href="#">募集要項</a>
+            </button>
+          </div>
+          <!-- text系をまとめているclassここまで -->
+        </div>
+      </section>
+      <!-- 第2sectionここから -->
+      <section id="job">
+        <div class="wrapper">
+          <div class="job-content">
+            <div class="job-img-title">
+              <h1 class="text-title text-position">job</h1>
+              <img
+                class="job-img"
+                src="images/新卒画像2.jpg"
+                alt="シャッターストックの画像"
+              />
+            </div>
+            <div class="job-img-caption">
+              <img
+                class="pose-img"
+                src="images/ガッツポーズ.jpg"
+                alt="シャッターストック画像"
+              />
+            </div>
+          </div>
+          <p class="job-caption">ここでは営業職をイメージしています</p>
+        </div>
+      </section>
+      <!-- 第2sectionここまで -->
+
+      <!-- ここからフッター -->
+      <footer class="footer-wrapper">
+        <div class="footer-description">
+          <!-- /contact -->
+          <div class="page-top" id="js-page-top">
+            <img
+              class="top-img"
+              src="images/expand_less_white_topscroll.svg"
+              alt=""
+            />
+          </div>
+          <h2>
+            株式会社 <br />
+            Sample
+          </h2>
+          <p>
+            〒100-1234 <br />
+            会社　住所 <br />
+            TEL
+          </p>
+        </div>
+        <ul class="footer-nav">
+          <li class="footer-list">
+            <a href="#">会社概要</a>
+          </li>
+          <li class="footer-list">
+            <a href="#">サービス内容</a>
+          </li>
+          <li class="footer-list">
+            <a href="#">スタッフブログ</a>
+          </li>
+          <li class="footer-list">
+            <a href="#">お問い合わせ</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

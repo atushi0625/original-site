@@ -1,0 +1,45 @@
+@use '../pages/main';
+@use '../pages/header';
+@use '../pages/job';
+@use '../pages/concept';
+@use '../base/variables';
+
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+     @media (max-width: ($pc)) {
+          @content;
+     }
+}
+
+@mixin tab {
+     @media (max-width: ($tab)) {
+          @content;
+     }
+}
+
+@mixin sp {
+     @media (max-width: ($sp)) {
+          @content;
+     }
+}
+
+a {
+     text-decoration: none;
+
+}
+
+ul,
+li {
+     list-style: none;
+}
+
+body {
+     font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.wrap {
+     overflow: hidden;
+}

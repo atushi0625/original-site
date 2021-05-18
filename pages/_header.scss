@@ -1,0 +1,167 @@
+$pc: 1024px; // PC
+$tab: 760px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+     @media (max-width: ($pc)) {
+          @content;
+     }
+}
+
+@mixin tab {
+     @media (max-width: ($tab)) {
+          @content;
+     }
+}
+
+@mixin sp {
+     @media (max-width: ($sp)) {
+          @content;
+     }
+}
+
+
+:root {
+     --top-color: #cdd7dc;
+     --middle-color: #e4b9b9;
+     --bg-color: #f8f6f2;
+}
+
+
+
+
+header {
+
+
+     .header-wrapper {
+          width: 100%;
+          margin: 0 auto;
+          position: fixed;
+          display: flex;
+          justify-content: space-between;
+          z-index: 10;
+          padding: 1rem;
+     }
+
+     .header-wrapper.active {
+          padding: 20px 30px;
+          background-color: rgba(0, 0, 0, .4);
+
+     }
+
+     .main-nav {
+          display: flex;
+          margin: 20px 0 0 0;
+          padding: 1rem 0;
+          list-style: none;
+
+          @include tab {
+               display: none;
+          }
+
+
+          .nav-list {
+               font-size: 1.4rem;
+               color: var(--top-color);
+               margin-right: 2rem;
+               text-transform: uppercase;
+               padding: 0 20px 0;
+
+
+
+               &:nth-child(3) {
+                    margin-right: 0;
+
+               }
+          }
+     }
+
+}
+
+
+.header-name {
+     font-weight: bold;
+     letter-spacing: 3px;
+     text-align: center;
+     font-size: 2rem;
+     color: var(--top-color);
+     line-height: 1.2;
+     list-style: none;
+
+}
+
+/*ハンバーガーメニュー*/
+.sp-menu {
+     margin-left: auto;
+     display: none;
+
+
+     @include tab {
+          display: inline-block;
+     }
+}
+
+#open {
+     border-radius: 50%;
+     background: var(--top-color);
+     width: 60px;
+     height: 60px;
+     cursor: pointer;
+}
+
+#close {
+     width: 60px;
+     height: 60px;
+     cursor: pointer;
+     display: none;
+
+}
+
+@include tab {
+     .overlay {
+          opacity: 0;
+          visibility: hidden;
+     }
+}
+
+
+/*ハンバーガーメニューがクリックされたら発火する*/
+.is-drawerActive {
+     #close {
+          display: inline-block;
+     }
+
+     .overlay {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.6);
+          text-align: center;
+          padding: 64px;
+          opacity: 1;
+          visibility: visible;
+          transition: opacity .5s ease-in;
+
+     }
+
+     .main-nav {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 70vh;
+          width: 100%;
+          line-height: 5;
+
+          .nav-list {
+               margin-right: 0;
+               color: #000000;
+               opacity: 1;
+               transform: none;
+
+
+          }
+     }
+
+}
